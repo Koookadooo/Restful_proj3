@@ -1,3 +1,6 @@
+require('dotenv').config();
+require('./models/associations');
+
 const express = require('express')
 const morgan = require('morgan')
 

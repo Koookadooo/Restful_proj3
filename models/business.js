@@ -1,10 +1,8 @@
 const { DataTypes } = require('sequelize')
-
 const sequelize = require('../lib/sequelize')
-const { Photo } = require('./photo')
-const { Review } = require('./review')
 
 const Business = sequelize.define('business', {
+  id: { type: DataTypes.INTEGER, allowNull: false, primaryKey: true, autoIncrement: true },
   ownerId: { type: DataTypes.INTEGER, allowNull: false },
   name: { type: DataTypes.STRING, allowNull: false },
   address: { type: DataTypes.STRING, allowNull: false },
@@ -17,18 +15,6 @@ const Business = sequelize.define('business', {
   website: { type: DataTypes.STRING, allowNull: true },
   email: { type: DataTypes.STRING, allowNull: true }
 })
-
-/*
-* Set up one-to-many relationship between Business and Photo.
-*/
-Business.hasMany(Photo, { foreignKey: { allowNull: false } })
-Photo.belongsTo(Business)
-
-/*
-* Set up one-to-many relationship between Business and Photo.
-*/
-Business.hasMany(Review, { foreignKey: { allowNull: false } })
-Review.belongsTo(Business)
 
 exports.Business = Business
 

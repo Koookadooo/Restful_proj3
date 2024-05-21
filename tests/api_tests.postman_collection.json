@@ -643,7 +643,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"userId\": 25,\n    \"businessId\": 2,\n    \"caption\": \"Look at this sweet bag of mixed fasteners I just bought!\"\n}",
+									"raw": "{\n    \"userId\": 5,\n    \"businessId\": 2,\n    \"caption\": \"Look at this sweet bag of mixed fasteners I just bought!\"\n}",
 									"options": {
 										"raw": {}
 									}
@@ -935,7 +935,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"userId\": 21,\n    \"businessId\": 10,\n    \"caption\": \"So many books!\"\n}",
+							"raw": "{\n    \"userId\": 16,\n    \"businessId\": 10,\n    \"caption\": \"So many books!\"\n}",
 							"options": {
 								"raw": {}
 							}
@@ -1137,7 +1137,7 @@
 								],
 								"body": {
 									"mode": "raw",
-									"raw": "{\n    \"userId\": 25,\n    \"businessId\": 2,\n    \"dollars\": 1,\n    \"stars\": 5,\n    \"review\": \"How many fasteners can one room hold?\"\n}",
+									"raw": "{\n    \"userId\": 1,\n    \"businessId\": 2,\n    \"dollars\": 1,\n    \"stars\": 5,\n    \"review\": \"How many fasteners can one room hold?\"\n}",
 									"options": {
 										"raw": {}
 									}
@@ -1429,7 +1429,7 @@
 						],
 						"body": {
 							"mode": "raw",
-							"raw": "{\n    \"userId\": 21,\n    \"businessId\": 10,\n    \"dollars\": 1,\n    \"stars\": 5,\n    \"review\": \"My favorite bookstore.\"\n}",
+							"raw": "{\n    \"userId\": 7,\n    \"businessId\": 10,\n    \"dollars\": 1,\n    \"stars\": 5,\n    \"review\": \"My favorite bookstore.\"\n}",
 							"options": {
 								"raw": {}
 							}
@@ -1568,7 +1568,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "0",
+									"value": "1",
 									"type": "string",
 									"description": "(Required) Unique ID of a user."
 								}
@@ -1634,7 +1634,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "21",
+									"value": "6",
 									"type": "string",
 									"description": "(Required) Unique ID of a user."
 								}
@@ -1700,7 +1700,7 @@
 							"variable": [
 								{
 									"key": "userId",
-									"value": "21",
+									"value": "6",
 									"type": "string",
 									"description": "(Required) Unique ID of a user."
 								}

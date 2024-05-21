@@ -1,9 +1,9 @@
 const { Router } = require('express')
 const { ValidationError } = require('sequelize')
-
 const { Business, BusinessClientFields } = require('../models/business')
 const { Photo } = require('../models/photo')
 const { Review } = require('../models/review')
+const { checkAuth, checkAdmin } = require('../middleware/auth');
 
 const router = Router()
 
@@ -55,7 +55,7 @@ router.get('/', async function (req, res) {
 /*
  * Route to create a new business.
  */
-router.post('/', async function (req, res, next) {
+router.post('/', checkAuth, async function (req, res, next) {
   try {
     const business = await Business.create(req.body, BusinessClientFields)
     res.status(201).send({ id: business.id })
@@ -86,7 +86,7 @@ router.get('/:businessId', async function (req, res, next) {
 /*
  * Route to update data for a business.
  */
-router.patch('/:businessId', async function (req, res, next) {
+router.patch('/:businessId', checkAuth, async function (req, res, next) {
   const businessId = req.params.businessId
   const result = await Business.update(req.body, {
     where: { id: businessId },
@@ -102,7 +102,7 @@ router.patch('/:businessId', async function (req, res, next) {
 /*
  * Route to delete a business.
  */
-router.delete('/:businessId', async function (req, res, next) {
+router.delete('/:businessId', checkAuth, async function (req, res, next) {
   const businessId = req.params.businessId
   const result = await Business.destroy({ where: { id: businessId }})
   if (result > 0) {
